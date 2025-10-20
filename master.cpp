@@ -38,3 +38,11 @@ void input (int** m, size_t row, size_t col) {
 		for (size_t j = 0; j < col && (std::cin); ++j)
 			std::cin >> m[i][j];
 }
+
+void output (conste int* const * m, size_t row, size_t col) {
+
+	for (size_t i = 0; i < row && (std::cin); ++i)
+                for (size_t j = 0; j < col && (std::cin); ++j)
+			std::cout << m[i][j];
+
+
