@@ -10,27 +10,25 @@ void output(const int* const* m, size_t row, size_t col);
 
 int main () {
 
-size_t row = 0, col = 0;
-
-std::cin >> row >> col;
-
-if (!std::cin)
+	size_t row = 0, col = 0;
+	
+	std::cin >> row >> col;
+	
+	if (!std::cin)
+		return 1;
+	
+	int** m = create(row, col);
+		
+		input(m, row, col);
+	if (!std::cin) {
+			remove(m, row);
         return 1;
-
-int** m = create(row, col);
-
-input(m, row, col);
-
-if (!std::cin) {
-        remove(m, row);
-        return 1;
-}
-
-output(m, row, col);
-
-remove(m, row);
-
-std::cout << '\n' << row << " " << col << '\n';
+	}
+	
+	output(m, row, col);
+	remove(m, row);
+	
+	std::cout << '\n' << row << " " << col << '\n';
 
 
 }
@@ -47,7 +45,8 @@ void output(const int* const* m, size_t row, size_t col) {
     for (size_t i = 0; i < row; ++i) {
         for (size_t j = 0; j < col; ++j)
             std::cout << m[i][j] << " ";
-    std::cout << '\n';
+
+        std::cout << '\n';
     }
 
 }
