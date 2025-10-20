@@ -51,6 +51,15 @@ void output (conste int* const * m, size_t row, size_t col) {
 
 
 int** create (size_t row, size_t col){
+	
+	int** result = nullptr; 
+
+
+
+
+
+
+
 
 }
 
