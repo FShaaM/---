@@ -18,6 +18,7 @@ if (!std::cin)
         return 1;
 
 int** m = create(row, col);
+
 input(m, row, col);
 
 if (!std::cin) {
@@ -25,11 +26,11 @@ if (!std::cin) {
         return 1;
 }
 
-
 output(m, row, col);
+
 remove(m, row);
 
-std::cout << row << " " << col << '\n';
+std::cout << '\n' << row << " " << col << '\n';
 
 
 }
@@ -43,11 +44,11 @@ void input(int** m, size_t row, size_t col) {
 
 void output(const int* const* m, size_t row, size_t col) {
 
-    for (size_t i = 0; i < row; ++i)
+    for (size_t i = 0; i < row; ++i) {
         for (size_t j = 0; j < col; ++j)
             std::cout << m[i][j] << " ";
     std::cout << '\n';
-
+    }
 
 }
 
